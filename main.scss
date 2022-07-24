@@ -1,0 +1,125 @@
+@import './colors';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: $Cream;
+}
+.card-container {
+	padding: 0 20px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	min-width: 350px;
+	max-width: 750px;
+	width: 100%;
+	border-radius: 15px;
+	overflow: hidden;
+	&__article {
+		text-transform: uppercase;
+		color: $Dark-grayish-blue;
+	}
+	&__article-name {
+		margin: 10px 0;
+		font-family: 'Fraunces', serif;
+		font-size: 36px;
+	}
+	&__article-description {
+		color: $Dark-grayish-blue;
+	}
+	&__button {
+		padding: 10px 0;
+		width: 100%;
+		border: none;
+		border-radius: 15px;
+		background-color: $Dark-cyan;
+		color: $White;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.4s;
+	}
+	&__button:hover {
+		background-color: $Very-dark-blue;
+	}
+	&__image {
+		display: block;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		overflow: hidden;
+	}
+	&__price {
+		color: $Dark-grayish-blue;
+		text-decoration: line-through;
+	}
+	&__price-section {
+		margin: 10px 0;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	&__promotion-price {
+		padding-right: 20px;
+		font-family: 'Fraunces', serif;
+		font-size: 36px;
+		color: $Dark-cyan;
+	}
+	&__text-container {
+		padding: 25px;
+		background-color: $White;
+	}
+	.fa-solid {
+		margin-right: 10px;
+	}
+	@media (min-width: 576px) {
+		flex-direction: row;
+		&__article {
+			font-size: 18px;
+		}
+		&__article-description {
+			font-size: 18px;
+		}
+		&__article-name {
+			font-size: 42px;
+		}
+		&__button {
+			padding: 15px;
+		}
+		&__image {
+			height: 100%;
+			width: 100%;
+		}
+		&__img-container {
+			width: 50%;
+		}
+		&__text-container {
+			padding: 35px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 50%;
+		}
+		&__price {
+			font-size: 18px;
+		}
+		&__promotion-price {
+			font-size: 42px;
+		}
+	}
+}
